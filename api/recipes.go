@@ -11,11 +11,16 @@ type Recipe struct {
 	Output_Item_Id int `json:"output_item_id"`
 	Output_Item_Count int `json:"output_item_count"`
 	Time_To_Craft int `json:"time_to_craft_ms"` // time to craft in seconds
-	Disciplines []CraftingDiscipline `json:"disciplines"`
+	Disciplines []string `json:"disciplines"`
 	Min_Rating int `json:"min_rating"`
 	Flags []string `json:"flags"`
 	Ingredients []Ingredient `json:"ingredients"`
 	Chat_Link string `json:"chat_link"`
+}
+
+type Ingredient struct {
+	Item_ID int `json:"item_id"`
+	Count int `json:"count"`
 }
 
 type Recipes struct {
